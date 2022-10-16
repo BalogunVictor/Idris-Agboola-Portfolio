@@ -1,4 +1,4 @@
-import Link from '../ui/molecules/Link';
+import { LinkStyled } from '../ui/atoms/link';
 const data = [
   {
     title: 'My Career',
@@ -10,7 +10,15 @@ const data = [
               such as Javascript, React, Typescript, Nodejs, React-Native, etc. 
               `,
         substitle: 'Programming',
-        link: <Link href="https://github.com/agboolaidris">view github</Link>,
+        link: (
+          <LinkStyled
+            href="https://github.com/agboolaidris"
+            style={{ fontWeight: 'bolder' }}
+            color="accent"
+          >
+            view github
+          </LinkStyled>
+        ),
       },
       {
         description: `My studies in Electronic Engineering have given me 
@@ -37,9 +45,13 @@ const data = [
               `,
         substitle: 'Rob Dial Podcast',
         link: (
-          <Link href="https://open.spotify.com/show/706hylM6zaDW8LrrYxcggQ">
+          <LinkStyled
+            style={{ fontWeight: 'bolder' }}
+            color="accent"
+            href="https://open.spotify.com/show/706hylM6zaDW8LrrYxcggQ"
+          >
             view podcast
-          </Link>
+          </LinkStyled>
         ),
       },
       {
@@ -48,9 +60,13 @@ const data = [
               `,
         substitle: 'Robbin Sharma Podcast',
         link: (
-          <Link href="https://open.spotify.com/episode/0I7OgP8OOaFbJrQ5z8c8o0">
+          <LinkStyled
+            style={{ fontWeight: 'bolder' }}
+            color="accent"
+            href="https://open.spotify.com/episode/0I7OgP8OOaFbJrQ5z8c8o0"
+          >
             view podcast
-          </Link>
+          </LinkStyled>
         ),
       },
       {
@@ -60,9 +76,13 @@ const data = [
               `,
         substitle: 'Code Evolution',
         link: (
-          <Link href="https://www.youtube.com/c/Codevolution/playlists">
+          <LinkStyled
+            color="accent"
+            style={{ fontWeight: 'bolder' }}
+            href="https://www.youtube.com/c/Codevolution/playlists"
+          >
             youtube channel
-          </Link>
+          </LinkStyled>
         ),
       },
     ],

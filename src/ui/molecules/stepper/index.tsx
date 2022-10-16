@@ -1,5 +1,6 @@
 import { Stack } from '@mui/material';
 import React, { ReactNode } from 'react';
+import { Text } from '../../atoms/text';
 import { ListWrapper } from './style';
 interface Props {
   title: string;
@@ -13,7 +14,7 @@ function ListStepper({ title, items }: Props) {
   return (
     <ListWrapper>
       <div className="timeline education">
-        <h2 className="timeline-title">{title}</h2>
+        <Text as="h4">{title}</Text>
         <div className="timeline-items">
           {items.map((item, index) => (
             <div className="timeline-item" key={index}>
@@ -23,11 +24,11 @@ function ListStepper({ title, items }: Props) {
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <h3>{item.substitle}</h3>
+                  <Text as="h5">{item.substitle}</Text>
                   {item.link}
                 </Stack>
               </div>
-              <div className="location">{item.description}</div>
+              <Text className="location">{item.description}</Text>
             </div>
           ))}
         </div>

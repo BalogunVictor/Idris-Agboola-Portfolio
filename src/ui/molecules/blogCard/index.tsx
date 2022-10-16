@@ -2,6 +2,8 @@ import React from 'react';
 import Moment from 'moment';
 import { IBlog } from '../../../interface/blog';
 import { BlogCardWrapper } from './style';
+import { LinkStyled } from '../../atoms/link';
+import { Text } from '../../atoms/text';
 
 function BlogCard({
   description,
@@ -11,13 +13,15 @@ function BlogCard({
 }: IBlog) {
   const formatDate = Moment(published_timestamp).format('MMM Do YYYY');
   return (
-    <a href={`${canonical_url}`}>
+    <LinkStyled href={`${canonical_url}`} color="accent">
       <BlogCardWrapper>
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <p className="timeformat">{formatDate}</p>
+        <Text as="h4">{title}</Text>
+        <Text>{description}</Text>
+        <Text as="figcaption" className="timeformat">
+          {formatDate}
+        </Text>
       </BlogCardWrapper>
-    </a>
+    </LinkStyled>
   );
 }
 

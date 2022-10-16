@@ -3,7 +3,6 @@ import { Box, Container } from '@mui/material';
 import { motion } from 'framer-motion';
 import Header from '../ui/molecules/navbar';
 import SocailMedia, { SocailMedia2 } from '../ui/molecules/socailMedia';
-import { GlobalStyleLayout } from '../assets/theme/globalStyle';
 
 interface Props {
   children: ReactNode;
@@ -17,9 +16,16 @@ function Layout({ children }: Props) {
   };
 
   return (
-    <GlobalStyleLayout>
+    <>
       <Header />
-      <Container sx={{ marginTop: { xs: 4, md: 10 }, marginBottom: 4 }}>
+      <Container
+        sx={{
+          marginTop: { xs: 4, md: 10 },
+          marginBottom: 4,
+          width: '1000px',
+          maxWidth: '100%',
+        }}
+      >
         <motion.main
           variants={variants} // Pass the variant object into Framer Motion
           initial="hidden" // Set the initial state to variants.hidden
@@ -35,7 +41,7 @@ function Layout({ children }: Props) {
         </motion.main>
       </Container>
       <SocailMedia2 />
-    </GlobalStyleLayout>
+    </>
   );
 }
 

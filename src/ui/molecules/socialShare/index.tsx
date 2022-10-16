@@ -24,17 +24,17 @@ import {
 } from '@mui/icons-material';
 
 const BootstrapDialog = styled(Dialog)<{ theme?: Theme }>`
-  color: ${({ theme }) => theme.colors.white} !important;
-  background: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.dominant} !important;
+  background: ${({ theme }) => theme.colors.dominant};
   & > div {
     & > div {
       text-align: center;
-      background: ${({ theme }) => theme.colors.lightBlack};
+      background: ${({ theme }) => theme.colors.dominant50};
     }
   }
   p,
   h5 {
-    color: ${({ theme }) => theme.colors.white} !important;
+    color: ${({ theme }) => theme.colors.accent} !important;
   }
 `;
 

@@ -7,17 +7,11 @@ export const ResumeWrapper = styled.div<{ theme?: Theme; full?: boolean }>`
   max-width: 100%;
   width: 700px;
   overflow: hidden;
-  background: ${({ theme }) => theme.colors.lightBlack};
+  background: ${({ theme }) => theme.colors.accent50};
   .viewer-wrapper {
     height: 750px;
   }
 
-  * {
-    color: #070d0d !important;
-  }
-  p,
-  span {
-  }
   ${({ theme }) => theme.breakpoints.down('sm')} {
     height: 500px;
   }

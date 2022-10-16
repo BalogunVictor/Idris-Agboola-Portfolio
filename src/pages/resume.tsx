@@ -1,8 +1,7 @@
-import { Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import React, { useState, ReactElement } from 'react';
 import Layout from '../layout';
 import { ResumeWrapper } from '../ui/atoms/resumeWarpper';
-import { LinkButton } from '../ui/atoms/button';
 import SocialShare from '../ui/molecules/socialShare';
 import LearnMore from '../ui/molecules/learnMore';
 
@@ -16,8 +15,10 @@ import {
   ToolbarSlot,
 } from '@react-pdf-viewer/default-layout';
 import { TransformToolbarSlot, toolbarPlugin } from '@react-pdf-viewer/toolbar';
-import Link from '../ui/molecules/Link';
+import Link from '../ui/molecules/nextLink';
 import SEO from '../ui/molecules/seo';
+import { Text } from '../ui/atoms/text';
+import { LinkStyled } from '../ui/atoms/link';
 
 function Resume() {
   // Create new plugin instance
@@ -48,23 +49,34 @@ function Resume() {
   return (
     <Layout>
       <SEO title="Resume | Agboola Idris" />
-      <Typography variant="h3">Resumé.</Typography>
-      <Typography sx={{ marginY: 4, maxWidth: '700px' }}>
-        Please feel free to contact me via my{' '}
-        <Link href="contact">
-          <LinkButton> contact page</LinkButton>
-        </Link>
-        . You can{' '}
-        <a href="#">
-          {' '}
-          <LinkButton onClick={handleOpenModal}> share </LinkButton>
-        </a>{' '}
-        or{' '}
-        <a download href="resume.pdf">
-          <LinkButton> Download </LinkButton>
-        </a>{' '}
-        my resume here.
-      </Typography>
+      <Box sx={{ maxWidth: '700px', marginBottom: 5 }}>
+        <Text as="h1" style={{ marginBottom: 0 }}>
+          Resumé.
+        </Text>
+        <Text>
+          Please feel free to contact me via my{' '}
+          <Link href="contact" style={{ fontWeight: 'bolder' }}>
+            contact page
+          </Link>
+          . You can{' '}
+          <LinkStyled
+            style={{ fontWeight: 'bolder' }}
+            onClick={handleOpenModal}
+          >
+            {' '}
+            share{' '}
+          </LinkStyled>
+          or{' '}
+          <LinkStyled
+            style={{ fontWeight: 'bolder' }}
+            download
+            href="resume.pdf"
+          >
+            download
+          </LinkStyled>{' '}
+          my resume here.
+        </Text>
+      </Box>
       <ResumeWrapper>
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.15.349/build/pdf.worker.js">
           <div className="viewer-wrapper">

@@ -27,7 +27,7 @@ export const CustomCusorWrapper = styled.div<Props>`
   .cursor {
     width: inherit;
     height: inherit;
-    border: 2px solid ${({ theme }) => theme.colors.danger};
+    border: 2px solid ${({ theme }) => theme.colors.compliment};
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
@@ -46,7 +46,7 @@ export const CustomCusorWrapper = styled.div<Props>`
         display: block;
         width: 80px;
         height: 80px;
-        background-color: ${theme.colors.danger};
+        background-color: ${theme.colors.compliment};
         border-radius: 50%;
         position: fixed;
         pointer-events: none;
@@ -54,7 +54,7 @@ export const CustomCusorWrapper = styled.div<Props>`
           content: 'Open';
           display: flex;
           height: inherit;
-          color: ${theme.colors.white};
+          color: ${theme.colors.dominant};
           justify-content: center;
           align-items: center;
         }

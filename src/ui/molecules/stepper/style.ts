@@ -11,7 +11,7 @@ export const ListWrapper = styled.div<{ theme?: Theme }>`
   .timeline-items {
     margin: 2em;
     padding: 0.01em 0 3em 2em;
-    border-left: 1px solid ${({ theme }) => theme.colors.lightBlack};
+    border-left: 1px solid ${({ theme }) => theme.colors.accent};
     .timeline-item {
       margin-bottom: 2em;
       margin-top: -0.3em;
@@ -23,7 +23,7 @@ export const ListWrapper = styled.div<{ theme?: Theme }>`
         font-weight: bold;
         margin: 0;
         position: relative;
-        h3 {
+        h5 {
           margin-block-start: 0px !important;
           margin-block-end: 0px !important;
         }
@@ -32,11 +32,12 @@ export const ListWrapper = styled.div<{ theme?: Theme }>`
           content: '';
           position: absolute;
           left: -2.35em;
-          border: 2px solid ${({ theme }) => theme.colors.white};
+          border: 1px solid ${({ theme }) => theme.colors.accent50};
           width: 0.7em;
           height: 0.7em;
           border-radius: 50%;
           transform: translate(-0.5px, 0.2em);
+          background-color: ${({ theme }) => theme.colors.dominant};
         }
       }
       .timeline-item .location {

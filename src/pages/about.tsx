@@ -1,46 +1,64 @@
-import { Typography, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import React from 'react';
 import Layout from '../layout';
 import ImgBox from '../ui/molecules/imgBox';
 import LearnMore from '../ui/molecules/learnMore';
 import aboutItems from '../constants/about';
 import VerticalLinearStepper from '../ui/molecules/stepper';
-import { LinkButton } from '../ui/atoms/button';
 import SEO from '../ui/molecules/seo';
+import { LinkStyled } from '../ui/atoms/link';
+import { Text } from '../ui/atoms/text';
 
 function About() {
   return (
     <Layout>
       <SEO title="About | Agboola Idris" />
-      <Typography variant="h3">About Me.</Typography>
+      <Text as="h1">About Me.</Text>
       <Grid
         container
         direction={{ xs: 'column-reverse', md: 'row' }}
         sx={{ marginTop: { xs: 4, md: 6 } }}
       >
         <Grid item xs={12} md={6}>
-          <Typography>
+          <Text>
             Hi! my name is Idris Agboola and I love using my skill set to
             simplify work for enterprises.I also like sharing content related to
             the stuff that I have learned over a long time in software
             development so it can offer assistance to other individuals in the
             Dev Community.
-          </Typography>
-          <Typography sx={{ marginTop: 2 }}>
+          </Text>
+          <Text style={{ marginTop: 8 }}>
             fast-forward to today, I have the opportunity to work in
-            <a href="http://www.ritemate.com/" rel="noreferrer" target="_blank">
-              <LinkButton> Ritemate technology</LinkButton>,
-            </a>
-            <a href="https://1worq.com/" rel="noreferrer" target="_blank">
-              <LinkButton> 1worq</LinkButton>,
-            </a>{' '}
+            <LinkStyled
+              color="compliment"
+              href="http://www.ritemate.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              {'  '}Ritemate technology,
+            </LinkStyled>
+            <LinkStyled
+              color="compliment"
+              href="https://1worq.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              {' '}
+              1worq.
+            </LinkStyled>{' '}
             and{' '}
-            <a href="####" rel="noreferrer">
-              <LinkButton> Invoke-Creation</LinkButton>,
-            </a>{' '}
+            <LinkStyled
+              color="compliment"
+              href="##"
+              rel="noreferrer"
+              target="_blank"
+            >
+              {' '}
+              Invoke Creation.
+            </LinkStyled>{' '}
             as a software developer. These days, I focus on building accessible,
             inclusive products and digital experiences for Invoke-creation.
-          </Typography>
+          </Text>
         </Grid>
         <Grid
           item

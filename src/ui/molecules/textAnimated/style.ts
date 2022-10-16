@@ -6,13 +6,13 @@ const Light = (theme?: Theme) =>
   keyframes`
     0%,
     80% {
-      color: ${theme?.colors.white};
+      color: ${theme?.colors.accent50};
       text-shadow: none;
     }
     100% {
-      color: ${theme?.colors.white};
-      text-shadow: -0.06em 0 ${theme?.colors.danger},
-        0.06em 0 ${theme?.colors.white};
+      color: ${theme?.colors.accent50};
+      text-shadow: -0.06em 0 ${theme?.colors.compliment},
+        0.06em 0 ${theme?.colors.accent50};
     }
 
 `;

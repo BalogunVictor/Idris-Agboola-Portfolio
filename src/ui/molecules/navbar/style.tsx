@@ -1,11 +1,10 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { Box, Theme } from '@mui/material';
+import { Box, Container, Theme } from '@mui/material';
 
-export const HeaderStyled = styled(Box)<{ theme?: Theme }>`
+export const HeaderStyled = styled(Container)<{ theme?: Theme }>`
   height: 100px;
   width: 100%;
-  padding: 0 min(5%, 100px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,11 +19,12 @@ export const Logo = styled.a<{ theme?: Theme }>`
   ${({ theme }) =>
     true &&
     css`
-      color: ${theme.colors.lightBlack};
-      text-shadow: 0 0 5px ${theme.colors.white}, 0 0 10px ${theme.colors.white},
-        0 0 15px ${theme.colors.white}, 0 0 20px ${theme.colors.white},
-        0 0 30px ${theme.colors.white}, 0 0 40px ${theme.colors.white},
-        0 0 55px ${theme.colors.white}, 0 0 75px ${theme.colors.white};
+      color: ${theme.colors.dominant50};
+      text-shadow: 0 0 5px ${theme.colors.accent},
+        0 0 10px ${theme.colors.accent}, 0 0 15px ${theme.colors.accent},
+        0 0 20px ${theme.colors.accent}, 0 0 30px ${theme.colors.accent},
+        0 0 40px ${theme.colors.accent}, 0 0 55px ${theme.colors.accent},
+        0 0 75px ${theme.colors.accent};
     `}
 `;
 
@@ -53,18 +53,18 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     a {
       display: block;
       &:hover {
-        color: ${({ theme }) => theme.colors.danger};
+        color: ${({ theme }) => theme.colors.compliment};
       }
     }
     transition: all 2s ease-in-out;
     &.active-link {
       a {
-        color: ${({ theme }) => theme.colors.danger};
+        color: ${({ theme }) => theme.colors.compliment};
       }
       .underline {
         width: 100%;
         height: 1px;
-        background: ${({ theme }) => theme.colors.danger};
+        background: ${({ theme }) => theme.colors.compliment};
       }
     }
   }
@@ -73,7 +73,7 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     position: fixed;
     width: 100%;
     z-index: 40;
-    background: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.dominant50};
     left: 0;
     top: 0;
     margin-block-start: 0em !important;
@@ -95,20 +95,15 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
       width: 100%;
       padding: 15px;
       margin-top: 20px;
-      &:first-child {
+      &:first-of-type {
         margin-top: 30px;
       }
       .underline {
         display: none;
       }
-      a {
-        font-size: 20px;
-        font-style: bolder;
-        text-decoration: none;
-      }
       &.active-link {
         a {
-          color: ${({ theme }) => theme.colors.danger};
+          color: ${({ theme }) => theme.colors.compliment};
         }
       }
     }
