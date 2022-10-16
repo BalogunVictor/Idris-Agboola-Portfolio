@@ -13,7 +13,7 @@ export const lightColors = {
   dominant50: '#F1EFEC',
   accent: '#110F0C',
   accent50: '#31302E',
-  compliment: '#FF8B5C',
+  compliment: '#BCA987',
 };
 
 export type ColorsInterface = typeof darkColors;

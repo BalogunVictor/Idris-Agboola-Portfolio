@@ -13,8 +13,8 @@ const data = [
         link: (
           <LinkStyled
             href="https://github.com/agboolaidris"
-            style={{ fontWeight: 'bolder' }}
-            color="accent"
+            style={{ textDecoration: 'underline' }}
+            color="compliment"
           >
             view github
           </LinkStyled>
@@ -46,8 +46,8 @@ const data = [
         substitle: 'Rob Dial Podcast',
         link: (
           <LinkStyled
-            style={{ fontWeight: 'bolder' }}
-            color="accent"
+            style={{ textDecoration: 'underline' }}
+            color="compliment"
             href="https://open.spotify.com/show/706hylM6zaDW8LrrYxcggQ"
           >
             view podcast
@@ -61,8 +61,8 @@ const data = [
         substitle: 'Robbin Sharma Podcast',
         link: (
           <LinkStyled
-            style={{ fontWeight: 'bolder' }}
-            color="accent"
+            style={{ textDecoration: 'underline' }}
+            color="compliment"
             href="https://open.spotify.com/episode/0I7OgP8OOaFbJrQ5z8c8o0"
           >
             view podcast
@@ -77,8 +77,8 @@ const data = [
         substitle: 'Code Evolution',
         link: (
           <LinkStyled
-            color="accent"
-            style={{ fontWeight: 'bolder' }}
+            style={{ textDecoration: 'underline' }}
+            color="compliment"
             href="https://www.youtube.com/c/Codevolution/playlists"
           >
             youtube channel

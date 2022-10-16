@@ -7,6 +7,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import { useGlobalDispatch } from '../../../store';
 import { MODETYPE } from '../../../store/reducers/mode';
 import { Text } from '../../atoms/text';
+import { LinkStyled } from '../../atoms/link';
 
 interface LinkProps2 extends LinkProps {
   children: ReactNode;
@@ -18,9 +19,7 @@ function CustomLink({ children, href, ...props }: LinkProps2) {
       {router.pathname !== href && !router.pathname.includes(`${href}/`) ? (
         <div className={router.pathname === href ? 'active-link link' : 'link'}>
           <Link href={href} {...props}>
-            <Text as="a" color="accent50">
-              {children}
-            </Text>
+            <LinkStyled color="accent50">{children}</LinkStyled>
           </Link>
           <div className="underline"></div>
         </div>

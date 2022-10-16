@@ -28,27 +28,32 @@ function About() {
             Dev Community.
           </Text>
           <Text style={{ marginTop: 8 }}>
-            fast-forward to today, I have the opportunity to work in
+            fast-forward to today, I have the opportunity to work in{' '}
             <LinkStyled
-              color="compliment"
+              bg="dominant50"
+              color="accent"
+              hover="compliment"
               href="http://www.ritemate.com/"
               rel="noreferrer"
               target="_blank"
             >
-              {'  '}Ritemate technology,
-            </LinkStyled>
+              Ritemate technology,
+            </LinkStyled>{' '}
             <LinkStyled
-              color="compliment"
+              bg="dominant50"
+              color="accent"
+              hover="compliment"
               href="https://1worq.com/"
               rel="noreferrer"
               target="_blank"
             >
-              {' '}
               1worq.
             </LinkStyled>{' '}
             and{' '}
             <LinkStyled
-              color="compliment"
+              bg="dominant50"
+              color="accent"
+              hover="compliment"
               href="##"
               rel="noreferrer"
               target="_blank"

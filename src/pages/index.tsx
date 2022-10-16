@@ -27,21 +27,33 @@ const Home: NextPage = () => {
         <Text>
           I love using my skill set to simplify work for enterprises and improve
           the lives of people around me. View my Projects,{'  '}
-          <NextLink href="/" color="compliment">
+          <NextLink href="/" bg="dominant50" color="accent" hover="compliment">
             Articles,
           </NextLink>
           {'   '}
-          <NextLink href="/resume" color="compliment">
+          <NextLink
+            href="/resume"
+            bg="dominant50"
+            color="accent"
+            hover="compliment"
+          >
             Resumé,
           </NextLink>
           {'   '}
-          <NextLink href="/contact" color="compliment">
+          <NextLink
+            href="/contact"
+            bg="dominant50"
+            color="accent"
+            hover="compliment"
+          >
             Contact Me
           </NextLink>
           {'   '}
           or send me an email at{' '}
           <LinkStyled
-            color="compliment"
+            bg="dominant50"
+            color="accent"
+            hover="compliment"
             href="mailto: agboolaisholaidreez@gmail.com"
             rel="noreferrer"
             target="_blank"

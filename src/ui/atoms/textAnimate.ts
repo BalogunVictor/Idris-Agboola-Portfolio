@@ -14,12 +14,12 @@ export const T = styled.div<{ theme?: Theme }>`
     margin-block-end: 0em !important;
   }
 
-  h2:nth-child(1) {
+  h2:nth-of-type(1) {
     color: transparent;
     -webkit-text-stroke: 2px ${({ theme }) => theme.colors.accent};
   }
 
-  h2:nth-child(2) {
+  h2:nth-of-type(2) {
     color: ${({ theme }) => theme.colors.accent};
     animation: animate 4s ease-in-out infinite;
   }

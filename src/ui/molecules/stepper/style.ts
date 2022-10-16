@@ -32,7 +32,7 @@ export const ListWrapper = styled.div<{ theme?: Theme }>`
           content: '';
           position: absolute;
           left: -2.35em;
-          border: 1px solid ${({ theme }) => theme.colors.accent50};
+          border: 2px solid ${({ theme }) => theme.colors.accent50};
           width: 0.7em;
           height: 0.7em;
           border-radius: 50%;

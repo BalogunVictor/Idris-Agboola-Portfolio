@@ -27,10 +27,29 @@ export const CustomCusorWrapper = styled.div<Props>`
   .cursor {
     width: inherit;
     height: inherit;
-    border: 2px solid ${({ theme }) => theme.colors.compliment};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid ${({ theme }) => theme.colors.dominant50};
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
+
+    &::before {
+      content: '';
+      display: flex;
+      height: inherit;
+      color: ${({ theme }) => theme.colors.dominant50};
+      justify-content: center;
+      align-items: center;
+      font-size: 0.7rem;
+      font-weight: bolder;
+      background-color: ${({ theme }) => theme.colors.dominant50};
+      height: 5px;
+      width: 5px;
+
+      border-radius: 10px;
+    }
   }
   .link-cursor {
     display: none;
@@ -43,20 +62,31 @@ export const CustomCusorWrapper = styled.div<Props>`
       }
 
       .link-cursor {
-        display: block;
-        width: 80px;
-        height: 80px;
-        background-color: ${theme.colors.compliment};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        //background-color: ${theme.colors.compliment};
         border-radius: 50%;
+        border: 2px solid ${theme.colors.dominant50};
         position: fixed;
         pointer-events: none;
+
         &::before {
           content: 'Open';
           display: flex;
           height: inherit;
-          color: ${theme.colors.dominant};
+          color: ${theme.colors.dominant50};
           justify-content: center;
           align-items: center;
+          font-size: 0.7rem;
+          font-weight: bolder;
+          background-color: ${theme.colors.accent50};
+          height: 20px;
+          width: 50px;
+
+          border-radius: 10px;
         }
       }
     `}

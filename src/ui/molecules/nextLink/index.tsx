@@ -9,6 +9,7 @@ interface Props extends LinkProps {
   color?: ColorType;
   hover?: ColorType;
   style?: React.CSSProperties;
+  bg?: ColorType;
 }
 
 function NextLink({
@@ -18,11 +19,13 @@ function NextLink({
   color,
   hover,
   style,
+  bg,
   ...props
 }: Props) {
   return (
     <Link href={href} {...props}>
       <LinkStyled
+        bg={bg}
         color={color || 'compliment'}
         hover={hover}
         className={className}
