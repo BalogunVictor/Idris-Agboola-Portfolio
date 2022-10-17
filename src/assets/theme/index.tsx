@@ -30,8 +30,8 @@ function ThemeWrapper({ children }: Props) {
           name="theme-color"
           content={
             modeInitialState.mode == 'dark'
-              ? darkTheme.colors.black
-              : lightTheme.colors.black
+              ? darkTheme.colors.dominant50
+              : lightTheme.colors.dominant50
           }
         />
       </Head>

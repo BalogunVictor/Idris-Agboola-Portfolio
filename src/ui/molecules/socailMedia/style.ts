@@ -13,7 +13,7 @@ export const SocialMediaWrapper = styled.div<{ theme?: Theme }>`
     margin-top: 10px;
     height: 100px;
     width: 1px;
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.accent50};
   }
   a {
     margin-top: 10px;
@@ -24,17 +24,17 @@ export const SocialMediaWrapper = styled.div<{ theme?: Theme }>`
 `;
 
 export const SocialMediaIconWrapper = styled.div<{ theme?: Theme }>`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.accent50};
   width: 30px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  box-shadow: -1px 0px 4px 4px ${({ theme }) => theme.colors.white};
+  box-shadow: -1px 0px 4px 4px ${({ theme }) => theme.colors.accent50};
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.colors.danger};
-    box-shadow: -1px 0px 6px 6px ${({ theme }) => theme.colors.danger};
+    color: ${({ theme }) => theme.colors.compliment};
+    box-shadow: -1px 0px 6px 6px ${({ theme }) => theme.colors.compliment};
   }
 `;

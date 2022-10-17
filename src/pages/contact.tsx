@@ -1,14 +1,16 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import { useSnackbar } from 'notistack';
 import emailjs from '@emailjs/browser';
 import { isEmail } from '../helpers/isEmail';
 import Layout from '../layout';
-import { Button, LinkButton } from '../ui/atoms/button';
+import { Button } from '../ui/atoms/button';
 import LearnMore from '../ui/molecules/learnMore';
 import TextArea from '../ui/molecules/textArea';
 import TextInput from '../ui/molecules/textInput';
 import SEO from '../ui/molecules/seo';
+import { Text } from '../ui/atoms/text';
+import { LinkStyled } from '../ui/atoms/link';
 
 function About() {
   const initialState = { name: '', email: '', message: '' };
@@ -67,17 +69,21 @@ function About() {
   return (
     <Layout>
       <SEO title="Contact | Agboola Idris" />
-      <Typography variant="h3">Contact.</Typography>
-      <Typography sx={{ marginY: 5 }}>
+      <Text as="h1" style={{ marginBottom: 0 }}>
+        Contact.
+      </Text>
+      <Text>
         If you have any questions, feel free to contact me directly at <br />
-        <a
+        <LinkStyled
           href="mailto: agboolaisholaidreez@gmail.com"
           rel="noreferrer"
           target="_blank"
+          color="compliment"
+          style={{ fontWeight: 'bolder' }}
         >
-          <LinkButton> agboolaisholaidreez@gmail.com</LinkButton>
-        </a>
-      </Typography>
+          agboolaisholaidreez@gmail.com
+        </LinkStyled>
+      </Text>
       <Box sx={{ width: '600px', maxWidth: '100%' }}>
         <TextInput
           placeholder="Name"

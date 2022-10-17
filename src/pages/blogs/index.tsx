@@ -1,8 +1,9 @@
-import { Typography, Box } from '@mui/material';
+import { Box } from '@mui/material';
 import axios from 'axios';
 import React from 'react';
 import { IBlog } from '../../interface/blog';
 import Layout from '../../layout';
+import { Text } from '../../ui/atoms/text';
 import BlogCard from '../../ui/molecules/blogCard';
 import LearnMore from '../../ui/molecules/learnMore';
 import SEO from '../../ui/molecules/seo';
@@ -22,12 +23,14 @@ function Blogs({ blogs }: PROPS) {
         }}
       >
         <Box sx={{ width: '700px', maxWidth: '100%' }}>
-          <Typography variant="h3">Blog✍️ </Typography>
-          <Typography>
+          <Text as="h1" style={{ marginBottom: 0 }}>
+            Blog✍️{' '}
+          </Text>
+          <Text>
             I like sharing content related to the stuff that I have learned over
             a long time in software development so it can offer assistance to
             other individuals in the Dev Community
-          </Typography>
+          </Text>
           <Box sx={{ marginTop: 8 }}>
             {blogs.map((blog, index) => {
               return (

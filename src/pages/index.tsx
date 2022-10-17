@@ -1,46 +1,57 @@
 import * as React from 'react';
 import type { NextPage } from 'next';
-import { Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import Layout from '../layout';
 import TextAnimated from '../ui/molecules/textAnimated';
-import { ShowTypography } from '../ui/atoms/shadowText';
-import Link from '../ui/molecules/Link';
-import { LinkButton } from '../ui/atoms/button';
-import NavigationButton from '../ui/molecules/navigationButton';
+import NextLink from '../ui/molecules/nextLink';
+import { Text } from '../ui/atoms/text';
+import { LinkStyled } from '../ui/atoms/link';
+import { T } from '../ui/atoms/textAnimate';
+import LearnMore from '../ui/molecules/learnMore';
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <ShowTypography className="link">I&apos;m Idris Agboola</ShowTypography>
-      <Typography variant="body1" sx={{ marginTop: { xs: 2, md: 4 } }}>
-        A software engineer and fashion enthusiast residing in Lagos, Nigeria. I
-        am highly experienced in developing secure and dynamic applications.
-      </Typography>
+      <T>
+        <h2>I&apos;m Idris Agboola</h2>
+        <h2>I&apos;m Idris Agboola</h2>
+      </T>
 
-      <Typography variant="body1" sx={{ marginTop: { xs: 2, md: 4 } }}>
-        I love using my skill set to simplify work for enterprises and improve
-        the lives of people around me. View my Projects,{' '}
-        <Link href="/">
-          <LinkButton>Articles,</LinkButton>
-        </Link>
-        <Link href="/resume">
-          <LinkButton> Resumé,</LinkButton>
-        </Link>
-        <Link href="/contact">
-          <LinkButton> Contact Me,</LinkButton>
-        </Link>
-        or send me an email at{' '}
-        <a
-          href="mailto: agboolaisholaidreez@gmail.com"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <LinkButton>agboolaisholaidreez@gmail.com</LinkButton>
-        </a>
-        .
-      </Typography>
-
-      <NavigationButton text="Learn More About Me" href="/about" />
+      <Box sx={{ marginTop: { xs: 2, md: 4 } }}>
+        <Text>
+          A software engineer and fashion enthusiast residing in Lagos, Nigeria.
+          I am highly experienced in developing secure and dynamic applications.
+        </Text>
+      </Box>
+      <Box sx={{ marginTop: { xs: 2, md: 4 } }}>
+        <Text>
+          I love using my skill set to simplify work for enterprises and improve
+          the lives of people around me. View my Projects,{'  '}
+          <NextLink href="/" color="compliment">
+            Articles,
+          </NextLink>
+          {'   '}
+          <NextLink href="/resume" color="compliment">
+            Resumé,
+          </NextLink>
+          {'   '}
+          <NextLink href="/contact" color="compliment">
+            Contact Me
+          </NextLink>
+          {'   '}
+          or send me an email at{' '}
+          <LinkStyled
+            color="compliment"
+            href="mailto: agboolaisholaidreez@gmail.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            agboolaisholaidreez@gmail.com
+          </LinkStyled>
+          .
+        </Text>
+      </Box>
+      <LearnMore text="Learn More About Me" href="/about" />
 
       <TextAnimated text={'IRIS WELCOME YOU'} />
     </Layout>

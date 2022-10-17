@@ -38,7 +38,7 @@ export const Button = styled.button<{
   width?: string;
   loading: boolean;
 }>`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.accent};
   height: 50px;
   border: none;
   border-radius: 5px;
@@ -48,9 +48,9 @@ export const Button = styled.button<{
   overflow-x: hidden;
   z-index: 1;
   transition: all 0.3s ease-in-out;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.dominant50};
   &:hover {
-    background-color: ${({ theme }) => theme.colors.darkWhite};
+    background-color: ${({ theme }) => theme.colors.accent50};
   }
   ${({ loading, theme }) =>
     loading &&
@@ -58,13 +58,13 @@ export const Button = styled.button<{
       cursor: not-allowed !important;
 
       &:hover {
-        background-color: ${theme.colors.white};
+        pointer-events: none;
       }
       &::before {
         content: '';
         width: 0%;
         height: 100%;
-        background-color: ${theme.colors.darkWhite};
+        background-color: ${theme.colors.accent50};
         display: block;
         position: absolute;
         top: 0;
@@ -74,17 +74,6 @@ export const Button = styled.button<{
         z-index: -1;
       }
     `};
-`;
-
-export const LinkButton = styled.span<{ theme?: Theme }>`
-  // padding: 5px;
-  border-radius: 5px;
-  transition: all 0.3s ease-out;
-  color: ${({ theme }) => theme.colors.danger};
-  &:hover {
-    //  background-color: ${({ theme }) => theme.colors.danger};
-    // color: ${({ theme }) => theme.colors.white};
-  }
 `;
 
 const Moving = keyframes`
@@ -100,13 +89,4 @@ const Moving = keyframes`
 export const AnimationIconWrapper = styled.div`
   animation: ${Moving} 1.5s linear infinite;
   transition: all 0.4s ease-in-out;
-`;
-
-export const IconWrapper = styled.div<{ theme?: Theme }>`
-  transition: all 0.4s ease-in-out;
-  &:hover {
-    svg {
-      transform: scale(1.2);
-    }
-  }
 `;
