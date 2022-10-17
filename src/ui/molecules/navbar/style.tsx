@@ -73,7 +73,7 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     position: fixed;
     width: 100%;
     z-index: 40;
-    background: ${({ theme }) => theme.colors.dominant50};
+    background: ${({ theme }) => theme.colors.dominant};
     left: 0;
     top: 0;
     margin-block-start: 0em !important;

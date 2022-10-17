@@ -75,16 +75,18 @@ function About() {
       <Text>
         If you have any questions, feel free to contact me directly at <br />
         <LinkStyled
+          bg="dominant50"
+          color="accent"
+          hover="compliment"
           href="mailto: agboolaisholaidreez@gmail.com"
           rel="noreferrer"
           target="_blank"
-          color="compliment"
           style={{ fontWeight: 'bolder' }}
         >
           agboolaisholaidreez@gmail.com
         </LinkStyled>
       </Text>
-      <Box sx={{ width: '600px', maxWidth: '100%' }}>
+      <Box sx={{ width: '600px', maxWidth: '100%', marginTop: 5 }}>
         <TextInput
           placeholder="Name"
           value={state.name}

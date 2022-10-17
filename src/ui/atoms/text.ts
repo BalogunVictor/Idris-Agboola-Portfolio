@@ -4,7 +4,8 @@ import { IText } from '../../interface/text';
 
 export const Text = styled.p<IText>`
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.7;
+
   color: ${({ theme, color, as }) =>
     as === undefined
       ? theme.colors[color || 'accent50']

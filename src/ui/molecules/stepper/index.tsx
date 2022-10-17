@@ -20,9 +20,9 @@ function ListStepper({ title, items }: Props) {
             <div className="timeline-item" key={index}>
               <div className="item-title">
                 <Stack
-                  direction="row"
-                  justifyContent="space-between"
-                  alignItems="center"
+                  direction={{ md: 'row' }}
+                  justifyContent={{ md: 'space-between' }}
+                  alignItems={{ md: 'center' }}
                 >
                   <Text as="h5">{item.substitle}</Text>
                   {item.link}
