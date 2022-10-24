@@ -16,9 +16,9 @@ function ThemeWrapper({ children }: Props) {
     const mode = localStorage.getItem('mode');
 
     if (!mode) return;
-    if (mode === 'light')
-      dispatch({ type: MODETYPE.LIGHT, payload: { mode: '' } });
-    else dispatch({ type: MODETYPE.DARK, payload: { mode: '' } });
+    if (mode === 'dark')
+      dispatch({ type: MODETYPE.DARK, payload: { mode: '' } });
+    else dispatch({ type: MODETYPE.LIGHT, payload: { mode: '' } });
   }, [dispatch]);
 
   return (

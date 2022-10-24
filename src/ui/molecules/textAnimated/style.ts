@@ -33,7 +33,7 @@ export const TextStyled = styled.div<{ theme?: Theme }>`
   color: #333;
   font-weight: 500;
   opacity: 0.1;
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 5%;
   transform: translateX(-50%);
