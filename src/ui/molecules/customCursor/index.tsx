@@ -38,13 +38,6 @@ function CustomCursor() {
       x: mousePosition.x - 20,
       y: mousePosition.y - 20,
     },
-    text: {
-      height: 150,
-      width: 150,
-      x: mouseAchor ? mousePosition.x - 25 : mousePosition.x - 75,
-      y: mouseAchor ? mousePosition.y - 25 : mousePosition.y - 75,
-      mixBlendMode: 'difference',
-    },
   };
 
   return (

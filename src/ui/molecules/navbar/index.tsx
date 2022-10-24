@@ -7,7 +7,6 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import { useGlobalDispatch } from '../../../store';
 import { MODETYPE } from '../../../store/reducers/mode';
 import { Text } from '../../atoms/text';
-import { LinkStyled } from '../../atoms/link';
 
 interface LinkProps2 extends LinkProps {
   children: ReactNode;
@@ -16,14 +15,13 @@ function CustomLink({ children, href, ...props }: LinkProps2) {
   const router = useRouter();
   return (
     <>
-      {router.pathname !== href && !router.pathname.includes(`${href}/`) ? (
-        <div className={router.pathname === href ? 'active-link link' : 'link'}>
-          <Link href={href} {...props}>
-            <LinkStyled color="accent50">{children}</LinkStyled>
-          </Link>
-          <div className="underline"></div>
-        </div>
-      ) : null}
+      {router.pathname !== href && !router.pathname.includes(`${href}/`) && (
+        <Link href={href} {...props}>
+          <Text className="link" color="accent50" hover="compliment" as="a">
+            {children}
+          </Text>
+        </Link>
+      )}
     </>
   );
 }
@@ -40,10 +38,16 @@ function Header() {
       <Link href="/">
         <Logo>AI</Logo>
       </Link>
-      <Harmburger onClick={() => setOpenMobileDrawer(!openMobileDrawer)}>
-        {openMobileDrawer ? <TimesIcon /> : <BarIcon />}
+      <Harmburger onClick={() => setOpenMobileDrawer(true)}>
+        <BarIcon />
       </Harmburger>
       <NavBar open={openMobileDrawer}>
+        <Harmburger
+          onClick={() => setOpenMobileDrawer(false)}
+          className="harmburger"
+        >
+          <TimesIcon />
+        </Harmburger>
         <CustomLink href="/">Home</CustomLink>
         <CustomLink href="/about">About</CustomLink>
         <CustomLink href="/blogs">Blog</CustomLink>

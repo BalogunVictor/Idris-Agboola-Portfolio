@@ -11,7 +11,7 @@ export const TextInputStyled = styled(Box)<{ theme?: Theme; error: boolean }>`
     border: none;
     color: ${({ theme }) => theme.colors.accent50};
     display: block;
-    border: 2px solid
+    border: 0.5px solid
       ${({ theme, error }) =>
         error ? theme.colors.compliment : theme.colors.accent50};
     padding: 10px;

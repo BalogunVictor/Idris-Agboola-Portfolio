@@ -63,7 +63,9 @@ const Home: NextPage = () => {
           .
         </Text>
       </Box>
-      <LearnMore text="Learn More About Me" href="/about" />
+      <Box sx={{ width: '230px', maxWidth: '100%', cursor: 'pointer' }}>
+        <LearnMore text="Learn More About Me" href="/about" />
+      </Box>
 
       <TextAnimated text={'IRIS WELCOME YOU'} />
     </Layout>

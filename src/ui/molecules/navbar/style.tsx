@@ -50,23 +50,8 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     margin-left: 50px;
     width: max-content;
     text-align: center;
-    a {
-      display: block;
-      &:hover {
-        color: ${({ theme }) => theme.colors.compliment};
-      }
-    }
-    transition: all 2s ease-in-out;
-    &.active-link {
-      a {
-        color: ${({ theme }) => theme.colors.compliment};
-      }
-      .underline {
-        width: 100%;
-        height: 1px;
-        background: ${({ theme }) => theme.colors.compliment};
-      }
-    }
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
   }
 
   ${({ theme }) => theme.breakpoints.down('sm')} {
@@ -80,9 +65,9 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     margin-block-end: 0em !important;
     flex-direction: column;
     padding-inline-start: 0px;
-    height: 100vh;
+    height: 100%;
     padding-top: 50px;
-    transform: translatex(-100%);
+    transform: translatex(100%);
     transition: all 0.3s ease-in-out;
 
     ${({ open }) =>
@@ -94,18 +79,14 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
       margin-left: 0px;
       width: 100%;
       padding: 15px;
-      margin-top: 20px;
-      &:first-of-type {
-        margin-top: 30px;
-      }
-      .underline {
-        display: none;
-      }
-      &.active-link {
-        a {
-          color: ${({ theme }) => theme.colors.compliment};
-        }
-      }
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    .harmburger {
+      position: absolute;
+      right: 20px;
+      top: 40px;
     }
   }
 `;
@@ -115,6 +96,5 @@ export const Harmburger = styled.div<{ theme?: Theme }>`
 
   ${({ theme }) => theme.breakpoints.down('sm')} {
     display: block;
-    z-index: 100;
   }
 `;
