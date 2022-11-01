@@ -35,8 +35,8 @@ function CustomCursor() {
 
   const variants: Variants = {
     default: {
-      x: mousePosition.x - 20,
-      y: mousePosition.y - 20,
+      x: mouseAchor ? mousePosition.x - 40 : mousePosition.x - 20,
+      y: mouseAchor ? mousePosition.y - 40 : mousePosition.y - 20,
     },
   };
 

@@ -11,12 +11,18 @@ interface Props {
 function LearnMore({ text, href }: Props) {
   return (
     <Link href={href || '/'}>
-      <Text as="a">
+      <Text
+        as="a"
+        style={{ width: 'max-content', display: 'block', cursor: 'pointer' }}
+      >
         <Stack
           direction="row"
           alignItems="center"
           spacing={2}
-          sx={{ marginTop: { xs: 2, md: 4 } }}
+          sx={{
+            marginTop: { xs: 2, md: 4 },
+            width: 'max-content',
+          }}
         >
           <Text>{text}</Text>
           <AnimationIconWrapper>
