@@ -64,8 +64,9 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     margin-block-start: 0em !important;
     margin-block-end: 0em !important;
     flex-direction: column;
+    justify-content: space-evenly;
     padding-inline-start: 0px;
-    height: 100%;
+    min-height: 100vh;
     padding-top: 50px;
     transform: translatex(100%);
     transition: all 0.3s ease-in-out;
@@ -79,8 +80,9 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
       margin-left: 0px;
       width: 100%;
       padding: 15px;
-      margin-top: 30px;
+      // margin-top: 40px;
       font-weight: bold;
+      font-size: 1.3rem;
     }
 
     .harmburger {
