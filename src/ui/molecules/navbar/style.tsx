@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-import { Box, Container, Theme } from '@mui/material';
-
+import { Container, Theme } from '@mui/material';
 export const HeaderStyled = styled(Container)<{ theme?: Theme }>`
   height: 100px;
   width: 100%;
@@ -42,6 +41,7 @@ export const ModeWrapper = styled.div<{ theme?: Theme }>`
     top: 30px;
   }
 `;
+
 export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
   display: flex;
   align-items: center;
@@ -56,10 +56,11 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
 
   ${({ theme }) => theme.breakpoints.down('sm')} {
     position: fixed;
-    width: 100%;
+    width: 300px;
+    max-width: 100%;
     z-index: 40;
-    background: ${({ theme }) => theme.colors.dominant};
-    left: 0;
+    background: ${({ theme }) => theme.colors.dominant50};
+    right: 0;
     top: 0;
     margin-block-start: 0em !important;
     margin-block-end: 0em !important;
@@ -67,8 +68,9 @@ export const NavBar = styled.ul<{ theme?: Theme; open: boolean }>`
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    transform: translatex(100%);
+    transform: translatex(200%);
     transition: all 0.3s ease-in-out;
+    box-shadow: -150px 0px 5px 2px rgba(0, 0, 0, 0.75);
 
     ${({ open }) =>
       open &&
